@@ -1,6 +1,6 @@
 {
   "name": "find-synology",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Use find.synology.com's APIs for finding your local Synology NASs",
   "main": "index.mjs",
   "scripts": {
