@@ -87,7 +87,11 @@ export const search = async (agentUrl) => {
 
 export const searchResult = async (agentUrl) => {
   const response = await fetch(`${agentUrl}/webman/search_result.cgi?_dc=${getUnixTimeStampMs()}&callback=${JSONP_CALLBACK}&idx=${JSONP_CALLBACK_INDEX}`);
-  return await response.text();
+  const text = await response.text();
+  if (!text.trim()) {
+    throw new Error('Empty search result');
+  }
+  return text;
 };
 
 export const doSearch = async (agentUrls) => {
@@ -127,7 +131,7 @@ export const doSearch = async (agentUrls) => {
         script.runInNewContext(context);
       }, 0);
 
-      return result;
+      return await result;
     } catch (err) {
       // do nothing
     }
