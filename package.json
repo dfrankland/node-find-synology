@@ -1,0 +1,22 @@
+{
+  "name": "find-synology",
+  "version": "0.1.0",
+  "description": "Use find.synology.com's APIs for finding your local Synology NASs",
+  "main": "index.mjs",
+  "scripts": {
+    "test": "node --experimental-modules ./test.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dfrankland/node-find-synology.git"
+  },
+  "author": "Dylan Frankland",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dfrankland/node-find-synology/issues"
+  },
+  "homepage": "https://github.com/dfrankland/node-find-synology#readme",
+  "dependencies": {
+    "node-fetch": "^2.6.0"
+  }
+}
